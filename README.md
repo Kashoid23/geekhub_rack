@@ -14,6 +14,11 @@ Rack defines a very simple interface. Rack compliant code must have the followin
 
 A nice side effect of the ``call`` interface is that procs and lambdas can be used as Rack objects.
 
+```
+run lambda { |env| [200, { 'content-type' => 'text/plain' }, ["Hello!"]] }
+run Proc.new { |env| [200, { 'content-type' => 'text/plain' }, ["Hello!"]] }
+```
+
 ### Usage
 
 https://github.com/rack/rack
