@@ -36,7 +36,7 @@ class Application
 
       if pet.mood < 50
         pet.hug
-        rack_response_redirect('/game')
+        rack_response('game.html.erb')
       else
         rack_response_redirect('/game_over')
       end
