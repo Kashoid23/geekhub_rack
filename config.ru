@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
 require 'rack'
 
-class Application
-  def call(env)
-    [200, { 'content-type' => 'text/plain' }, ["Hello!"]]
-  end
-end
+require './application'
 
 use Rack::Reloader, 0
+use Rack::Auth::Basic do |username, password|
+  username == 'vitalii' && password == 'password'
+end
 
 run Application.new
