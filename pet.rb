@@ -23,7 +23,7 @@ class Pet
     when 21..40
       'I feel fantastic!'
     else
-      'I will share the mood for cookies!'
+      "I'm batman!"
     end
   end
 end
