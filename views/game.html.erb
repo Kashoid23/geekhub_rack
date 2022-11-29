@@ -1,0 +1,12 @@
+<html>
+  <%= render('_head.html.erb') %>
+  <body>
+    <h1>Hello, my name is <%= pet.name %>! <%= pet.current_mood %></h1>
+    <h1><%= pet.info %></h1>
+    <form action="/hug">
+      <button type="submit" class="btn btn-primary">Hug <%= pet.name %>!</button>
+    </form>
+
+    <a href="/game_over">Stop the game!</a>
+  </body>
+</html>
